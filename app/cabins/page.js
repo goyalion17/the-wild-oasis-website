@@ -1,5 +1,16 @@
-function CabinsPage() {
-  return <h1>CabinsPage</h1>;
-}
+export default async function CabinsPage() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
 
-export default CabinsPage;
+  return (
+    <div>
+      <h1>CabinsPage</h1>
+
+      <ul>
+        {data.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
