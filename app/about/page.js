@@ -1,11 +1,11 @@
-import Navigation from "../_components/Navigation";
+export const metadata = {
+  title: "About",
+};
 
-function AboutPage() {
+export default function AboutPage() {
   return (
     <div>
       <h1>AboutPage</h1>
     </div>
   );
 }
-
-export default AboutPage;
